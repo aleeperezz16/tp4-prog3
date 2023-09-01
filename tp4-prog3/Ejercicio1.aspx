@@ -31,6 +31,10 @@
             height: 26px;
         }
       
+        .auto-style9 {
+            margin-bottom: 0px;
+        }
+      
     </style>
 </head>
 <body>
@@ -39,36 +43,49 @@
         <tr>
             <td class="auto-style6"></td>
             <td class="auto-style7"><u>DESTINO INICIO</u></td>
+            <td class="auto-style7">&nbsp;</td>
             <td class="auto-style8"></td>
         </tr>
         <tr>
             <td class="auto-style5"></td>
-            <td class="auto-style2"><b>PROVINCIA</b>:</td>
-            <td class="auto-style4">
+            <td class="auto-style2"><b>PROVINCIA:</b></td>
+            <td class="auto-style2">
                 <asp:DropDownList ID="ddlProvinciaInicio" runat="server" Height="25px" Width="132px">
                     <asp:ListItem Value="--Seleccionar--">--Seleccionar--</asp:ListItem>
                 </asp:DropDownList>
             </td>
+            <td class="auto-style4">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5"></td>
             <td class="auto-style2"><b>LOCALIDAD:</b></td>
-            <td class="auto-style4">
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="132px">
+            <td class="auto-style2">
+                <asp:DropDownList ID="DropDownList1" runat="server" Width="132px" CssClass="auto-style9">
                     <asp:ListItem>--Seleccionar--</asp:ListItem>
                 </asp:DropDownList>
             </td>
+            <td class="auto-style4">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
+            <td><b>PROVINCIA:</b></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style5">&nbsp;</td>
+            <td><b>LOCALIDAD:</b></td>
             <td>&nbsp;</td>
         </tr>
     </table>
