@@ -12,44 +12,63 @@
         .auto-style2 {
             width: 156px;
         }
-        .auto-style3 {
-            width: 156px;
-            height: 29px;
-        }
         .auto-style4 {
-            height: 29px;
+            height: 30px;
         }
+        .auto-style5 {
+            width: 100px;
+        }
+      
+        .auto-style6 {
+            width: 100px;
+            height: 26px;
+        }
+        .auto-style7 {
+            width: 156px;
+            height: 26px;
+        }
+        .auto-style8 {
+            height: 26px;
+        }
+      
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style2"><u>DESTINO INICIO</u></td>
-            <td>&nbsp;</td>
+            <td class="auto-style6"></td>
+            <td class="auto-style7"><u>DESTINO INICIO</u></td>
+            <td class="auto-style8"></td>
         </tr>
         <tr>
-            <td class="auto-style3"><b>PROVINCIA</b>:</td>
+            <td class="auto-style5"></td>
+            <td class="auto-style2"><b>PROVINCIA</b>:</td>
             <td class="auto-style4">
-                <asp:DropDownList ID="ddlProvinciaInicio" runat="server" Height="16px" Width="132px">
+                <asp:DropDownList ID="ddlProvinciaInicio" runat="server" Height="25px" Width="132px">
                     <asp:ListItem Value="--Seleccionar--">--Seleccionar--</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style5"></td>
+            <td class="auto-style2"><b>LOCALIDAD:</b></td>
+            <td class="auto-style4">
+                <asp:DropDownList ID="DropDownList1" runat="server" Width="132px">
+                    <asp:ListItem>--Seleccionar--</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
