@@ -12,8 +12,14 @@ namespace tp4_prog3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string rutaViajesSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(rutaViajesSQL);
+            if (IsPostBack == false)
+            {
+                ///LO DEJO COMO ESTÁ, LA RUTA, Porque en mi caso, tendria que cambiar la ruta para que me funcioen -David
+                string rutaViajesSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True";
+                SqlConnection connection = new SqlConnection(rutaViajesSQL);
+                connection.Open();
+
+            }
         }
     }
 }
