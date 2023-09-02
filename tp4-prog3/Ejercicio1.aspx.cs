@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace tp4_prog3
 {
@@ -11,7 +12,8 @@ namespace tp4_prog3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string rutaViajesSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(rutaViajesSQL);
         }
     }
 }
