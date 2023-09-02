@@ -61,7 +61,7 @@
             <td class="auto-style5"></td>
             <td class="auto-style2"><b>LOCALIDAD:</b></td>
             <td class="auto-style2">
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="132px" CssClass="auto-style9">
+                <asp:DropDownList ID="ddlLocalidadInicio" runat="server" Width="132px" CssClass="auto-style9">
                     <asp:ListItem>--Seleccionar--</asp:ListItem>
                 </asp:DropDownList>
             </td>
@@ -75,18 +75,24 @@
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td><u>DESTINO FINAL</u></td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
             <td><b>PROVINCIA:</b></td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:DropDownList ID="ddlProvinciaFinal" runat="server">
+                </asp:DropDownList>
+            </td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
             <td><b>LOCALIDAD:</b></td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:DropDownList ID="ddlLocalidadFinal" runat="server">
+                </asp:DropDownList>
+            </td>
         </tr>
     </table>
     </form>
