@@ -26,6 +26,17 @@
         .auto-style10 {
             width: 115px;
         }
+        .auto-style11 {
+            width: 115px;
+            height: 29px;
+        }
+        .auto-style12 {
+            width: 130px;
+            height: 29px;
+        }
+        .auto-style13 {
+            height: 29px;
+        }
     </style>
 </head>
 <body>
@@ -39,11 +50,11 @@
                 <td class="auto-style6"></td>
             </tr>
             <tr>
-                <td class="auto-style10">&nbsp;</td>
-                <td class="auto-style8">
+                <td class="auto-style11"></td>
+                <td class="auto-style12">
                     <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="PROVINCIA:"></asp:Label>
                 </td>
-                <td>
+                <td class="auto-style13">
                     <asp:DropDownList ID="ddlProvinciaInicio" runat="server">
                         <asp:ListItem>--Seleccionar--</asp:ListItem>
                     </asp:DropDownList>

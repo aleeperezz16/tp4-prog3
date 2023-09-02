@@ -20,6 +20,10 @@ namespace tp4_prog3
                 connection.Open();
                 SqlCommand cmd= new SqlCommand("Select * from Provincias", connection);
                 SqlDataReader dr = cmd.ExecuteReader();
+                ddlProvinciaInicio.DataSource = dr;
+                ddlProvinciaInicio.DataTextField = "NombreProvincia";
+                ddlProvinciaInicio.DataValueField = "IdProvincia";
+                ddlProvinciaInicio.DataBind();
             }
         }
 
