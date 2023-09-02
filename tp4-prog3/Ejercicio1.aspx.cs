@@ -18,8 +18,10 @@ namespace tp4_prog3
                 string rutaViajesSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True";
                 SqlConnection connection = new SqlConnection(rutaViajesSQL);
                 connection.Open();
-
+                SqlCommand cmd= new SqlCommand("Select * from Provincias", connection);
+                SqlDataReader dr = cmd.ExecuteReader();
             }
         }
+
     }
 }
