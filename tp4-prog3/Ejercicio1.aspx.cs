@@ -64,6 +64,12 @@ namespace tp4_prog3
                 item.Enabled = (item.Value==prov);
             }
 
+            foreach (ListItem item in ddlProvinciaFinal.Items)
+            {
+                if (item.Value != prov) { item.Enabled = true; }
+                else { item.Enabled = false; }
+            }
+
 
         }
     }
