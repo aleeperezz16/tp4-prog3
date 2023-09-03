@@ -10,6 +10,7 @@ namespace tp4_prog3
 {
     public partial class Ejercicio1 : System.Web.UI.Page
     {
+      
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack == false)
@@ -58,19 +59,30 @@ namespace tp4_prog3
         protected void ddlProvinciaInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             string prov = ddlProvinciaInicio.SelectedValue;
-
-            foreach (ListItem item in ddlLocalidadInicio.Items)
-            {
-                item.Enabled = (item.Value==prov);
-            }
+            
+            HabilitarLocalidadSegunProvincia(ddlLocalidadInicio, prov);
 
             foreach (ListItem item in ddlProvinciaFinal.Items)
             {
                 if (item.Value != prov) { item.Enabled = true; }
                 else { item.Enabled = false; }
-            }
+            }          
+
+        }
 
 
+        protected void ddlProvinciaFinal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string prov = ddlProvinciaFinal.SelectedValue;
+            HabilitarLocalidadSegunProvincia(ddlLocalidadFinal, prov);
+        }
+
+        void HabilitarLocalidadSegunProvincia(DropDownList ddl, String prov)
+        {
+            foreach(ListItem item in ddl.Items)
+                {
+                    item.Enabled = (item.Value == prov);
+                }
         }
     }
 }
