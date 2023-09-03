@@ -14,7 +14,8 @@ namespace tp4_prog3
         {
             if (IsPostBack == false)
             {
-                ///LO DEJO COMO ESTÁ, LA RUTA, Porque en mi caso, tendria que cambiar la ruta para que me funcioen -David
+                ///Ruta de David- no borrar
+                ///string  rutaViajesSQL ="Data Source = DESKTOP-CIET1TI\\SQLEXPRESS01; Initial Catalog=Viajes; Integrated Security = True";
                 string rutaViajesSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True";
                 SqlConnection connection = new SqlConnection(rutaViajesSQL);
                 connection.Open();
@@ -34,21 +35,36 @@ namespace tp4_prog3
                 dr.Close();
 
                 //Localidad
-                SqlCommand cmdLocalidades = new SqlCommand("SELECT * FROM Localidades;", connection);
+                
+                SqlCommand cmdLocalidades = new SqlCommand("SELECT * FROM Localidades ;", connection);
                 dr = cmdLocalidades.ExecuteReader();
 
                 while (dr.Read())
                 {
                     string localidad = dr["NombreLocalidad"].ToString();
-                    string value = dr["IdLocalidad"].ToString();
+                    string value = dr["IdProvincia"].ToString();
 
-                    ddlLocalidadInicio.Items.Add(new ListItem(localidad, value, false));
-                    ddlLocalidadFinal.Items.Add(new ListItem(localidad, value, false));   
+                        ddlLocalidadInicio.Items.Add(new ListItem(localidad, value, false));
+                        ddlLocalidadFinal.Items.Add(new ListItem(localidad, value, false));
+                    
                 }
+               
+                dr.Close();
 
                 connection.Close();
             }
         }
 
+        protected void ddlProvinciaInicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string prov = ddlProvinciaInicio.SelectedValue;
+            foreach (ListItem item in ddlLocalidadInicio.Items)
+            {
+               
+
+            }
+            
+           
+        }
     }
 }
