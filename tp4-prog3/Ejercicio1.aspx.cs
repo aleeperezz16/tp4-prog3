@@ -58,13 +58,13 @@ namespace tp4_prog3
         protected void ddlProvinciaInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             string prov = ddlProvinciaInicio.SelectedValue;
+
             foreach (ListItem item in ddlLocalidadInicio.Items)
             {
-               
-
+                item.Enabled = (item.Value==prov);
             }
-            
-           
+
+
         }
     }
 }

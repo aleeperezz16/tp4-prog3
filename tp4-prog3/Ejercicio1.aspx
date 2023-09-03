@@ -66,7 +66,7 @@
                     <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="LOCALIDAD:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="ddlLocalidadInicio" runat="server" AutoPostBack="True">
+                    <asp:DropDownList ID="ddlLocalidadInicio" runat="server">
                         <asp:ListItem>--Seleccionar--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
