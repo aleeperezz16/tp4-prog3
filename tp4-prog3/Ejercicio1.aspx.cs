@@ -18,27 +18,35 @@ namespace tp4_prog3
                 string rutaViajesSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True";
                 SqlConnection connection = new SqlConnection(rutaViajesSQL);
                 connection.Open();
-                SqlCommand cmdProvincias= new SqlCommand("Select * from Provincias", connection);
+                SqlCommand cmdProvincias= new SqlCommand("SELECT * FROM Provincias;", connection);
                 SqlDataReader dr = cmdProvincias.ExecuteReader();
 
-                //Provincia inicio
-                ddlProvinciaInicio.DataSource = dr;
-                ddlProvinciaInicio.DataTextField = "NombreProvincia";
-                ddlProvinciaInicio.DataValueField = "IdProvincia";
-                ddlProvinciaInicio.DataBind();
+                //Provincia
+                while (dr.Read())
+                {
+                    string provincia = dr["NombreProvincia"].ToString();
+                    string value = dr["IdProvincia"].ToString();
+
+                    ddlProvinciaInicio.Items.Add(new ListItem(provincia, value));
+                    ddlProvinciaFinal.Items.Add(new ListItem(provincia, value, false));
+                }
 
                 dr.Close();
 
-                //Localidad inicio
-                SqlCommand cmdLocalidades = new SqlCommand("Select * from Localidades",connection);
+                //Localidad
+                SqlCommand cmdLocalidades = new SqlCommand("SELECT * FROM Localidades;", connection);
                 dr = cmdLocalidades.ExecuteReader();
-                ddlLocalidadInicio.DataSource = dr;
-                ddlLocalidadInicio.DataTextField = "NombreLocalidad";
-                ddlLocalidadInicio.DataValueField = "IdLocalidad";
-                ddlLocalidadInicio.DataBind();
 
+                while (dr.Read())
+                {
+                    string localidad = dr["NombreLocalidad"].ToString();
+                    string value = dr["IdLocalidad"].ToString();
 
+                    ddlLocalidadInicio.Items.Add(new ListItem(localidad, value, false));
+                    ddlLocalidadFinal.Items.Add(new ListItem(localidad, value, false));   
+                }
 
+                connection.Close();
             }
         }
 
