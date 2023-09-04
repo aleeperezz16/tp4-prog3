@@ -22,9 +22,6 @@
                     <td class="auto-style2">Seleccionar tema:</td>
                     <td>
                         <asp:DropDownList ID="ddlTemas" runat="server">
-                            <asp:ListItem>Tema 1</asp:ListItem>
-                            <asp:ListItem>Tema 2</asp:ListItem>
-                            <asp:ListItem>Tema 3</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -33,7 +30,9 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:LinkButton ID="lbtnVerLibros" runat="server">Ver Libros</asp:LinkButton>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
