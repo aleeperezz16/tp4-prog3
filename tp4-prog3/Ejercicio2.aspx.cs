@@ -33,5 +33,11 @@ namespace tp4_prog3
             connection.Close();
 
         }
+
+        protected void btnQuitarFiltro_Click(object sender, EventArgs e)
+        {
+            txtFiltroCategoria.Text = "";
+            txtFiltroProducto.Text = "";
+        }
     }
 }

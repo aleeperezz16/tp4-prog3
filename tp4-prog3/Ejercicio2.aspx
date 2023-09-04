@@ -70,7 +70,7 @@
                         <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" />
                     </td>
                     <td class="auto-style8">
-                        <asp:Button ID="btnQuitarFiltro" runat="server" CssClass="auto-style9" Text="Quitar filtro" />
+                        <asp:Button ID="btnQuitarFiltro" runat="server" CssClass="auto-style9" Text="Quitar filtro" OnClick="btnQuitarFiltro_Click" />
                     </td>
                 </tr>
             </table>
