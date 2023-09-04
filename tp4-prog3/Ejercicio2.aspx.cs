@@ -38,6 +38,7 @@ namespace tp4_prog3
         {
             txtFiltroCategoria.Text = "";
             txtFiltroProducto.Text = "";
+            MostrarDatosCompletos();
         }
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
