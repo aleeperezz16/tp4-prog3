@@ -18,6 +18,16 @@ namespace tp4_prog3
                 SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Temas", connection);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+
+                while (dr.Read())
+                {
+                    string temas = dr["Tema"].ToString();
+                    string value = dr["IdTema"].ToString();
+
+                    ddlTemas.Items.Add(new ListItem(temas, value));
+                }
             }
         }
     }
