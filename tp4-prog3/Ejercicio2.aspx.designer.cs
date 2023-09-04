@@ -33,13 +33,13 @@ namespace tp4_prog3
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddlFiltroProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFiltroProducto;
 
         /// <summary>
         /// Control txtFiltroProducto.
@@ -60,13 +60,13 @@ namespace tp4_prog3
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control DropDownList2.
+        /// Control ddlFiltroCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFiltroCategoria;
 
         /// <summary>
         /// Control txtFiltroCategoria.
