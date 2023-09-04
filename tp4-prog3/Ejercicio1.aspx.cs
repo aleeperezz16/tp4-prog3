@@ -45,13 +45,11 @@ namespace tp4_prog3
                     string localidad = dr["NombreLocalidad"].ToString();
                     string value = dr["IdProvincia"].ToString();
 
-                        ddlLocalidadInicio.Items.Add(new ListItem(localidad, value, false));
-                        ddlLocalidadFinal.Items.Add(new ListItem(localidad, value, false));
-                    
+                    ddlLocalidadInicio.Items.Add(new ListItem(localidad, value, false));
+                    ddlLocalidadFinal.Items.Add(new ListItem(localidad, value, false));
                 }
                
                 dr.Close();
-
                 connection.Close();
             }
         }
@@ -59,17 +57,14 @@ namespace tp4_prog3
         protected void ddlProvinciaInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             string prov = ddlProvinciaInicio.SelectedValue;
-            
             HabilitarLocalidadSegunProvincia(ddlLocalidadInicio, prov);
 
-            foreach (ListItem item in ddlProvinciaFinal.Items)
+            for (int i = 1; i < ddlProvinciaFinal.Items.Count; i++)
             {
-                if (item.Value != prov) { item.Enabled = true; }
-                else { item.Enabled = false; }
-            }          
-
+                ListItem item = ddlProvinciaFinal.Items[i];
+                item.Enabled = item.Value != prov;
+            }
         }
-
 
         protected void ddlProvinciaFinal_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -79,10 +74,11 @@ namespace tp4_prog3
 
         void HabilitarLocalidadSegunProvincia(DropDownList ddl, String prov)
         {
-            foreach(ListItem item in ddl.Items)
-                {
-                    item.Enabled = (item.Value == prov);
-                }
+            for (int i = 1; i < ddl.Items.Count; i++)
+            {
+                ListItem item = ddl.Items[i];
+                item.Enabled = item.Value == prov;
+            }
         }
     }
 }
