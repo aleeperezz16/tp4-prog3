@@ -8,22 +8,24 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 75%;
-        }
-        .auto-style2 {
-            height: 26px;
-        }
-        .auto-style3 {
-            height: 26px;
-            width: 110px;
-        }
-        .auto-style4 {
-            height: 26px;
-            width: 80px;
+            width: 100%;
         }
         .auto-style5 {
-            height: 26px;
-            text-align: center;
+            width: 100px;
+        }
+        .auto-style6 {
+            width: 115px;
+            height: 55px;
+        }
+        .auto-style7 {
+            width: 100px;
+            height: 55px;
+        }
+        .auto-style8 {
+            height: 55px;
+        }
+        .auto-style9 {
+            margin-left: 25px;
         }
     </style>
 </head>
@@ -32,37 +34,43 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style3">&nbsp;&nbsp;&nbsp; IdProducto:</td>
-                    <td class="auto-style4">
-                        <asp:DropDownList ID="ddlFiltroProducto" runat="server">
-                            <asp:ListItem Value="=">Igual a</asp:ListItem>
-                            <asp:ListItem Value="&gt;">Mayor a</asp:ListItem>
-                            <asp:ListItem Value="&lt;">Menor a</asp:ListItem>
+                    <td class="auto-style5">
+                        <asp:Label ID="Label1" runat="server" Text="IdProducto:"></asp:Label>
+                    </td>
+                    <td class="auto-style5">
+                        <asp:DropDownList ID="DropDownList1" runat="server">
+                            <asp:ListItem Value="=">Igual a:</asp:ListItem>
+                            <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
+                            <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style2" colspan="2">
-                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="350px"></asp:TextBox>
+                    <td colspan="2">
+                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="260px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp; IdCategoria:</td>
-                    <td class="auto-style4">
-                        <asp:DropDownList ID="ddlFiltroCategoria" runat="server">
+                    <td class="auto-style5">
+                        <asp:Label ID="Label2" runat="server" Text="IdCategoria:"></asp:Label>
+                    </td>
+                    <td class="auto-style5">
+                        <asp:DropDownList ID="DropDownList2" runat="server">
+                            <asp:ListItem Value="=">Igual a:</asp:ListItem>
+                            <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
+                            <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style2" colspan="2">
-                        <asp:TextBox ID="txtFiltroCategoria" runat="server" Width="348px"></asp:TextBox>
+                    <td colspan="2">
+                        <asp:TextBox ID="txtFiltroCategoria" runat="server" Width="260px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style4">
-                        &nbsp;</td>
-                    <td class="auto-style5">
-                        <asp:Button ID="Button1" runat="server" Text="Button" />
+                    <td class="auto-style7"></td>
+                    <td class="auto-style7"></td>
+                    <td class="auto-style6" style="text-align: right">
+                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" />
                     </td>
-                    <td class="auto-style5">
-                        <asp:Button ID="Button2" runat="server" Text="Button" />
+                    <td class="auto-style8">
+                        <asp:Button ID="btnQuitarFiltro" runat="server" CssClass="auto-style9" Text="Quitar filtro" />
                     </td>
                 </tr>
             </table>
