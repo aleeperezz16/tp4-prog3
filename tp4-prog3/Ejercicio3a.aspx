@@ -22,9 +22,6 @@
                     <td class="auto-style2">Seleccionar tema:</td>
                     <td>
                         <asp:DropDownList ID="ddlTemas" runat="server">
-                            <asp:ListItem Value="1">Tema 1</asp:ListItem>
-                            <asp:ListItem Value="2">Tema 2</asp:ListItem>
-                            <asp:ListItem Value="3">Tema 3</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>

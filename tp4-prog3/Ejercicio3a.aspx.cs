@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace tp4_prog3
 {
@@ -11,7 +12,13 @@ namespace tp4_prog3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                string rutaLibreriaSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Libreria;Integrated Security=True";
+                SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
 
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Temas", connection);
+            }
         }
     }
 }
