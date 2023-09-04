@@ -35,11 +35,13 @@
                     <td class="auto-style3">&nbsp;&nbsp;&nbsp; IdProducto:</td>
                     <td class="auto-style4">
                         <asp:DropDownList ID="ddlFiltroProducto" runat="server">
+                            <asp:ListItem Value="=">Igual a</asp:ListItem>
+                            <asp:ListItem Value="&gt;">Mayor a</asp:ListItem>
+                            <asp:ListItem Value="&lt;">Menor a</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style2" colspan="2">
-                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="350px"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp; IdCategoria:</td>
