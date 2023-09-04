@@ -75,6 +75,8 @@
                 </tr>
             </table>
         </div>
+        <asp:GridView ID="grdProductos" runat="server">
+        </asp:GridView>
     </form>
 </body>
 </html>

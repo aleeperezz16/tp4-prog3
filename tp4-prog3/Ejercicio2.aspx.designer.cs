@@ -33,13 +33,13 @@ namespace tp4_prog3
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control ddlFiltroProducto.
+        /// Control DropDownList1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFiltroProducto;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
         /// Control txtFiltroProducto.
@@ -60,13 +60,13 @@ namespace tp4_prog3
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control ddlFiltroCategoria.
+        /// Control DropDownList2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFiltroCategoria;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
 
         /// <summary>
         /// Control txtFiltroCategoria.
@@ -94,5 +94,14 @@ namespace tp4_prog3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnQuitarFiltro;
+
+        /// <summary>
+        /// Control grdProductos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdProductos;
     }
 }

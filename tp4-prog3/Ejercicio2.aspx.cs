@@ -26,6 +26,11 @@ namespace tp4_prog3
             string rutaNeptunoSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
             SqlConnection connection = new SqlConnection(rutaNeptunoSQL);
             connection.Open();
+            SqlCommand cmd = new SqlCommand("Select * from Productos", connection);
+            SqlDataReader dr = cmd.ExecuteReader();
+            grdProductos.DataSource = dr;
+            grdProductos.DataBind();
+            connection.Close();
 
         }
     }
