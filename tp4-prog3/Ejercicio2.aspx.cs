@@ -10,28 +10,26 @@ namespace tp4_prog3
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        static string rutaNeptunoSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
+        static string selectQuery = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad, PrecioUnidad FROM Productos";
+        static SqlConnection connection = new SqlConnection(rutaNeptunoSQL);
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                EstablecerConexion(); 
-
-
+                MostrarDatosCompletos();
             }
         }
 
-
-        void EstablecerConexion()
+        void MostrarDatosCompletos()
         {
-            string rutaNeptunoSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(rutaNeptunoSQL);
             connection.Open();
-            SqlCommand cmd = new SqlCommand("Select IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad from Productos", connection);
+            SqlCommand cmd = new SqlCommand(selectQuery, connection);
             SqlDataReader dr = cmd.ExecuteReader();
+
             grdProductos.DataSource = dr;
             grdProductos.DataBind();
             connection.Close();
-
         }
 
         protected void btnQuitarFiltro_Click(object sender, EventArgs e)
@@ -42,27 +40,26 @@ namespace tp4_prog3
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
+            connection.Open();
+            string query = selectQuery;
+
+            if (txtFiltroProducto.Text.Length > 0)
+                query += " WHERE IdProducto" + ddlFiltroProducto.SelectedValue + txtFiltroProducto.Text;
             
-            try
+            if (txtFiltroCategoria.Text.Length > 0)
             {
-                if (int.Parse(txtFiltroProducto.Text) <= 0) { return;}
-                string rutaNeptunoSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
-                SqlConnection connection = new SqlConnection(rutaNeptunoSQL);
-                connection.Open();
-                string command = "Select IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad from Productos where IdProducto";
-                command += DropDownList1.SelectedValue;
-                command += txtFiltroProducto.Text;
-                SqlCommand cmd = new SqlCommand(command, connection);
-                SqlDataReader dr = cmd.ExecuteReader();
-                grdProductos.DataSource = dr;
-                grdProductos.DataBind();
-                connection.Close();
-            }
-            catch(Exception error)
-            {
-
+                if (query != selectQuery)
+                    query += " AND IdCategoría" + ddlFiltroCategoria.SelectedValue + txtFiltroCategoria.Text;
+                else
+                    query += " WHERE IdCategoría" + ddlFiltroCategoria.SelectedValue + txtFiltroCategoria.Text;  
             }
 
+            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlDataReader dr = cmd.ExecuteReader();
+            
+            grdProductos.DataSource = dr;
+            grdProductos.DataBind();
+            connection.Close();
         }
     }
 }

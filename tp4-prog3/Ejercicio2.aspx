@@ -38,7 +38,7 @@
                         <asp:Label ID="Label1" runat="server" Text="IdProducto:"></asp:Label>
                     </td>
                     <td class="auto-style5">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:DropDownList ID="ddlFiltroProducto" runat="server">
                             <asp:ListItem Value="=">Igual a:</asp:ListItem>
                             <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
                             <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
@@ -53,7 +53,7 @@
                         <asp:Label ID="Label2" runat="server" Text="IdCategoria:"></asp:Label>
                     </td>
                     <td class="auto-style5">
-                        <asp:DropDownList ID="DropDownList2" runat="server">
+                        <asp:DropDownList ID="ddlFiltroCategoria" runat="server">
                             <asp:ListItem Value="=">Igual a:</asp:ListItem>
                             <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
                             <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
