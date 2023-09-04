@@ -41,7 +41,8 @@
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style2" colspan="2">
-                        &nbsp;</td>
+                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="350px"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp; IdCategoria:</td>
