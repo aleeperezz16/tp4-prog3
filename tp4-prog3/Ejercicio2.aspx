@@ -8,7 +8,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 100%;
+            width: 75%;
         }
         .auto-style2 {
             height: 26px;
@@ -20,6 +20,10 @@
         .auto-style4 {
             height: 26px;
             width: 80px;
+        }
+        .auto-style5 {
+            height: 26px;
+            text-align: center;
         }
     </style>
 </head>
@@ -33,8 +37,8 @@
                         <asp:DropDownList ID="ddlFiltroProducto" runat="server">
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style2">
-                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="228px"></asp:TextBox>
+                    <td class="auto-style2" colspan="2">
+                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="350px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -43,8 +47,19 @@
                         <asp:DropDownList ID="ddlFiltroCategoria" runat="server">
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style2">
-                        <asp:TextBox ID="txtFiltroCategoria" runat="server" Width="228px"></asp:TextBox>
+                    <td class="auto-style2" colspan="2">
+                        <asp:TextBox ID="txtFiltroCategoria" runat="server" Width="348px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style4">
+                        &nbsp;</td>
+                    <td class="auto-style5">
+                        <asp:Button ID="Button1" runat="server" Text="Button" />
+                    </td>
+                    <td class="auto-style5">
+                        <asp:Button ID="Button2" runat="server" Text="Button" />
                     </td>
                 </tr>
             </table>
