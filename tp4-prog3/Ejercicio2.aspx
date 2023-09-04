@@ -67,7 +67,7 @@
                     <td class="auto-style7"></td>
                     <td class="auto-style7"></td>
                     <td class="auto-style6" style="text-align: right">
-                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" />
+                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" />
                     </td>
                     <td class="auto-style8">
                         <asp:Button ID="btnQuitarFiltro" runat="server" CssClass="auto-style9" Text="Quitar filtro" OnClick="btnQuitarFiltro_Click" />

@@ -26,7 +26,7 @@ namespace tp4_prog3
             string rutaNeptunoSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
             SqlConnection connection = new SqlConnection(rutaNeptunoSQL);
             connection.Open();
-            SqlCommand cmd = new SqlCommand("Select * from Productos", connection);
+            SqlCommand cmd = new SqlCommand("Select IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad from Productos", connection);
             SqlDataReader dr = cmd.ExecuteReader();
             grdProductos.DataSource = dr;
             grdProductos.DataBind();
@@ -38,6 +38,31 @@ namespace tp4_prog3
         {
             txtFiltroCategoria.Text = "";
             txtFiltroProducto.Text = "";
+        }
+
+        protected void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if (int.Parse(txtFiltroProducto.Text) <= 0) { return;}
+                string rutaNeptunoSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
+                SqlConnection connection = new SqlConnection(rutaNeptunoSQL);
+                connection.Open();
+                string command = "Select IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad from Productos where IdProducto";
+                command += DropDownList1.SelectedValue;
+                command += txtFiltroProducto.Text;
+                SqlCommand cmd = new SqlCommand(command, connection);
+                SqlDataReader dr = cmd.ExecuteReader();
+                grdProductos.DataSource = dr;
+                grdProductos.DataBind();
+                connection.Close();
+            }
+            catch(Exception error)
+            {
+
+            }
+
         }
     }
 }
