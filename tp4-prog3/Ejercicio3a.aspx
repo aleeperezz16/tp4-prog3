@@ -22,6 +22,9 @@
                     <td class="auto-style2">Seleccionar tema:</td>
                     <td>
                         <asp:DropDownList ID="ddlTemas" runat="server">
+                            <asp:ListItem>Tema 1</asp:ListItem>
+                            <asp:ListItem>Tema 2</asp:ListItem>
+                            <asp:ListItem>Tema 3</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
