@@ -23,6 +23,7 @@
         }
         .auto-style8 {
             height: 55px;
+            width:89px;
         }
         .auto-style9 {
             margin-left: 25px;
@@ -47,6 +48,9 @@
                     <td colspan="2">
                         <asp:TextBox ID="txtFiltroProducto" runat="server" Width="260px"></asp:TextBox>
                     </td>
+                    <td>
+                        <asp:RangeValidator ID="rvIdProducto" runat="server" ControlToValidate="txtFiltroProducto" MaximumValue="77" MinimumValue="1" Type="Integer">Ingrese un Id Producto entre 1 a 77</asp:RangeValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">
@@ -62,6 +66,9 @@
                     <td colspan="2">
                         <asp:TextBox ID="txtFiltroCategoria" runat="server" Width="260px"></asp:TextBox>
                     </td>
+                    <td>
+                        <asp:RangeValidator ID="rvIdCategoria" runat="server" ControlToValidate="txtFiltroCategoria" MaximumValue="8" MinimumValue="1" Type="Integer">Ingrese un Id Categoría entre 1 a 8</asp:RangeValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style7"></td>
@@ -72,6 +79,7 @@
                     <td class="auto-style8">
                         <asp:Button ID="btnQuitarFiltro" runat="server" CssClass="auto-style9" Text="Quitar filtro" OnClick="btnQuitarFiltro_Click" />
                     </td>
+                    <td>&nbsp;</td>
                 </tr>
             </table>
         </div>

@@ -51,6 +51,15 @@ namespace tp4_prog3
         protected global::System.Web.UI.WebControls.TextBox txtFiltroProducto;
 
         /// <summary>
+        /// Control rvIdProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvIdProducto;
+
+        /// <summary>
         /// Control Label2.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace tp4_prog3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFiltroCategoria;
+
+        /// <summary>
+        /// Control rvIdCategoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvIdCategoria;
 
         /// <summary>
         /// Control btnFiltrar.
