@@ -30,11 +30,21 @@
                 <tr>
                     <td class="auto-style3">&nbsp;&nbsp;&nbsp; IdProducto:</td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:DropDownList ID="ddlFiltroProducto" runat="server">
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox1" runat="server" Width="228px"></asp:TextBox>
+                        <asp:TextBox ID="txtFiltroProducto" runat="server" Width="228px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp; IdCategoria:</td>
+                    <td class="auto-style4">
+                        <asp:DropDownList ID="ddlFiltroCategoria" runat="server">
+                        </asp:DropDownList>
+                    </td>
+                    <td class="auto-style2">
+                        <asp:TextBox ID="txtFiltroCategoria" runat="server" Width="228px"></asp:TextBox>
                     </td>
                 </tr>
             </table>
