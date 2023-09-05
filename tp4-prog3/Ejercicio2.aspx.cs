@@ -43,6 +43,7 @@ namespace tp4_prog3
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
+           
             connection.Open();
             string query = selectQuery;
 
@@ -63,6 +64,9 @@ namespace tp4_prog3
             grdProductos.DataSource = dr;
             grdProductos.DataBind();
             connection.Close();
+            txtFiltroCategoria.Text = "";
+            txtFiltroProducto.Text = "";
+
         }
     }
 }
