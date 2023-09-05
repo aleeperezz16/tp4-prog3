@@ -16,6 +16,7 @@ namespace tp4_prog3
             {
                 string rutaLibreriaSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Libreria;Integrated Security=True";
                 SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
+                connection.Open();
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Temas", connection);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -28,7 +29,14 @@ namespace tp4_prog3
 
                     ddlTemas.Items.Add(new ListItem(temas, value));
                 }
+
+                connection.Close();
             }
+        }
+
+        protected void lbtnVerLibros_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ejercicio3b.aspx");
         }
     }
 }

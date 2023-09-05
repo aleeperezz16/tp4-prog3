@@ -31,7 +31,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:LinkButton ID="lbtnVerLibros" runat="server">Ver Libros</asp:LinkButton>
+                        <asp:LinkButton ID="lbtnVerLibros" runat="server" OnClick="lbtnVerLibros_Click">Ver Libros</asp:LinkButton>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
