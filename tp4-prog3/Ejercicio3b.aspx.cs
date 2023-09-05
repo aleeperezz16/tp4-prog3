@@ -11,6 +11,12 @@ namespace tp4_prog3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string Nombre;
+            string valor;
+            Nombre = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedItem.ToString();
+            valor = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedValue;
+
+ 
 
         }
     }

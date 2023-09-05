@@ -11,6 +11,8 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Lblistadolibros" runat="server" BorderStyle="None" Text="Listado de libros:"></asp:Label>
+            <br />
+            <br />
         </div>
     </form>
 </body>

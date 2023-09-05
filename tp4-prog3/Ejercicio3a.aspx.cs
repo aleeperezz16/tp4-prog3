@@ -13,7 +13,7 @@ namespace tp4_prog3
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
+            {  ///SERVER-DAVIDstring rutaLibreriaSQL = "Data Source=DESKTOP-CIET1TI\\SQLEXPRESS01;Initial Catalog=Libreria;Integrated Security=True";
                 string rutaLibreriaSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Libreria;Integrated Security=True";
                 SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
                 connection.Open();
@@ -36,7 +36,7 @@ namespace tp4_prog3
 
         protected void lbtnVerLibros_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Ejercicio3b.aspx");
+            Server.Transfer("Ejercicio3b.aspx");
         }
     }
 }
