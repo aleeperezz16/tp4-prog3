@@ -21,7 +21,6 @@ namespace tp4_prog3
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Temas", connection);
                 SqlDataReader dr = cmd.ExecuteReader();
 
-
                 while (dr.Read())
                 {
                     string temas = dr["Tema"].ToString();

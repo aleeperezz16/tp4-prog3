@@ -12,20 +12,26 @@ namespace tp4_prog3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Nombre;
-            string valor;
-            Nombre = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedItem.ToString();
-            valor = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedValue;
+            if (!IsPostBack)
+            {
+                string rutaLibreriaSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Libreria;Integrated Security=True";
+                SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
 
-            string rutaLibreriaSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Libreria;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
-            connection.Open();
-            string query = "SELECT * FROM Libros where IdTema = " + valor;
-            SqlCommand cmd = new SqlCommand(query, connection);
-            SqlDataReader dr = cmd.ExecuteReader();
-            grdLibros.DataSource = dr;
-            grdLibros.DataBind();
-            connection.Close();
+                string valor = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedValue;
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Libros WHERE IdTema = " + valor, connection);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                grdLibros.DataSource = dr;
+                grdLibros.DataBind();
+                connection.Close();
+            }
+        }
+
+        protected void lbtnElegirTema_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ejercicio3a.aspx");
         }
     }
 }
