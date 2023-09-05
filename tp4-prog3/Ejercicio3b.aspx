@@ -12,6 +12,8 @@
         <div>
             <asp:Label ID="Lblistadolibros" runat="server" BorderStyle="None" Text="Listado de libros:"></asp:Label>
             <br />
+        <asp:GridView ID="grdLibros" runat="server">
+        </asp:GridView>
             <br />
         </div>
     </form>

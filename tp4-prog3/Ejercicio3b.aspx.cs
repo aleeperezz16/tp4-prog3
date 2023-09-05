@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace tp4_prog3
 {
@@ -16,8 +17,15 @@ namespace tp4_prog3
             Nombre = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedItem.ToString();
             valor = ((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedValue;
 
- 
-
+            string rutaLibreriaSQL = "Data Source=localhost\\sqlexpress;Initial Catalog=Libreria;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(rutaLibreriaSQL);
+            connection.Open();
+            string query = "SELECT * FROM Libros where IdTema = " + valor;
+            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlDataReader dr = cmd.ExecuteReader();
+            grdLibros.DataSource = dr;
+            grdLibros.DataBind();
+            connection.Close();
         }
     }
 }
